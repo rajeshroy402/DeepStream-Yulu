@@ -248,21 +248,3 @@ NOTE: Used NVIDIA GTX 1050 (4GB Mobile) for evaluate. Used maintain-aspect-ratio
 
 </details>
 
-##
-
-### Extract metadata
-
-You can get metadata from deepstream in Python and C++. For C++, you need edit deepstream-app or deepstream-test code. For Python your need install and edit [deepstream_python_apps](https://github.com/NVIDIA-AI-IOT/deepstream_python_apps).
-
-You need manipulate NvDsObjectMeta ([Python](https://docs.nvidia.com/metropolis/deepstream/python-api/PYTHON_API/NvDsMeta/NvDsObjectMeta.html)/[C++](https://docs.nvidia.com/metropolis/deepstream/sdk-api/Meta/_NvDsObjectMeta.html)), NvDsFrameMeta ([Python](https://docs.nvidia.com/metropolis/deepstream/python-api/PYTHON_API/NvDsMeta/NvDsFrameMeta.html)/[C++](https://docs.nvidia.com/metropolis/deepstream/sdk-api/Meta/_NvDsFrameMeta.html)) and NvOSD_RectParams ([Python](https://docs.nvidia.com/metropolis/deepstream/python-api/PYTHON_API/NvDsOSD/NvOSD_RectParams.html)/[C++](https://docs.nvidia.com/metropolis/deepstream/sdk-api/OSD/Data_Structures/_NvOSD_FrameRectParams.html)) to get label, position, etc. of bboxs.
-
-In C++ deepstream-app application, your code need be in analytics_done_buf_prob function.
-In C++/Python deepstream-test application, your code need be in osd_sink_pad_buffer_probe/tiler_src_pad_buffer_probe function.
-
-Python is slightly slower than C (about 5-10%).
-
-##
-
-This code is open-source. You can use as you want. :)
-
-My projects: https://www.youtube.com/MarcosLucianoTV
